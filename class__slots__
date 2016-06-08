@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+#'一个练习作业，设计一个学生类，他有三个子类，分别是三个不同国家的学生类，每个类有个
+#成员方法speak可以说自己国家的话，通过这些类和成员方法和成员属性来复习类的方法覆盖和多态，
+#以及学习使用__slot__特殊变量来限定成员属性，以及实现增加函数的功能
+
+from types import MethodType
+class Student(object):
+	__slots__=('name','score')
+	
+	def __init__(self,name):
+		self.name=name
+	
+	def speak(self):
+		print('Student speak Chinese')
+		
+class Country1(Student):
+	def speak(self):
+		print('Student speak Japannes')
+class Country2(Student):
+	def speak(self):
+		print('Student speak French')
+class Country3(Student):
+	def speak(self):
+		print('Student speak English')
+s1=Student('codd')
+print(s1.name)
+s1.speak()
+s1.score=98
+print(s1.score)
+#实例增加功能
+def speak_end():
+	print('Student speak nothing')
+s2=	Country1('bit')
+
+s2.speak_end=speak_end
+s2.speak_end()
+#__slots__下增加类功能
+#Student.speak_end=speak_end
+#s1.speak_end()
+#类增加功能
+def speak_start(self):
+	print('start speaking')
+Country1.speak_start=speak_start
+s2.speak_start()
+
+s11=Country2('www')
+s3=	Country3('ccc')
+s2.speak()
+s11.speak()
+s3.speak()
