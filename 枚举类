@@ -41,7 +41,7 @@ print(Weekday['Mon'])#Weekday.Mon
 print(Weekday.Mon.value)#1
 print(Weekday(5))#<Weekday.Fri: 5>
 
-for name,member in Weekday.__member__.items():
+for name,member in Weekday.__members__.items():
   print(name,'=>',member,',',member.values)
 
 '''
