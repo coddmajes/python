@@ -61,3 +61,30 @@ BaseException
            +-- UnicodeWarning
            +-- BytesWarning
            +-- ResourceWarning
+
+'''
+#当不知道是什么类型的错误时
+except ValueError as e:
+    # 处理错误1
+    pass
+except ZeroDivisionError as e:
+    # 处理错误2
+    pass
+except BaseException as e:
+    # 处理所有其他类型错误
+    pass
+'''
+
+'''
+#pdb命令
+命令    解释
+break 或 b         设置断点
+continue 或 c    继续执行程序
+list 或 l              查看当前行的代码段
+step 或 s          进入函数
+return 或 r        执行代码直到从当前函数返回
+exit 或 q           中止并退出
+next 或 n          执行下一行
+p 变量名           打印变量的值
+help                  帮助
+'''
