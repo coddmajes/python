@@ -53,3 +53,16 @@ Thu => Weekday.Thu , 4
 Fri => Weekday.Fri , 5
 Sat => Weekday.Sat , 6
 '''
+
+'''
+type(Enum)#<class 'enum.EnumMeta'>
+type(Month)#<class 'enum.EnumMeta'>
+isinstance(Month.Jan, Month)#TRUE
+isinstance(Month.Jan, Enum)#TRUE
+>>>isinstance(Enum, Month)
+False
+>>> isinstance(Month, Enum)
+False
+>>> issubclass(Month,Enum)
+True
+'''
