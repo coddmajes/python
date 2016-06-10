@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#为这样的枚举类型定义一个class类型，然后，每个常量都是class的一个唯一实例
+from enum import Enum
+
+Month=Enum('Month',('Jan','Feb','Mar','Apr','May','Jun','Jul','Agu','Spe','Oct','Nov','Dec'))
+
+for name,member in Month.__members__.items():
+  print(name,'=>',member,',',member.value)#value 属性是自动赋给成员的int常量  默认从1开始计数
+  
+'''
+Jan => Month.Jan , 1
+Feb => Month.Feb , 2
+Mar => Month.Mar , 3
+Apr => Month.Apr , 4
+May => Month.May , 5
+Jun => Month.Jun , 6
+Jul => Month.Jul , 7
+Aug => Month.Aug , 8
+Sep => Month.Sep , 9
+Oct => Month.Oct , 10
+Nov => Month.Nov , 11
+Dec => Month.Dec , 12
+'''
+
+#从Enum派生出自定义类
+from enum import Enum,unique
+@unique#可以检查保证没有重复值
+class Weekday(Enum):
+  Sun=0
+  Mon=1
+  Tue=2
+  Wed=3
+  Thu=4
+  Fri=5
+  Sat=6
+day1=Weekday.Mon
+print(day1)#Weekday.Mon
+print(Weekday.Mon)#Weekday.Mon
+print(Weekday['Mon'])#Weekday.Mon
+print(Weekday.Mon.value)#1
+print(Weekday(5))#<Weekday.Fri: 5>
+
+for name,member in Weekday.__member__.items():
+  print(name,'=>',member,',',member.values)
+
+'''
+Sun => Weekday.Sun , 0
+Mon => Weekday.Mon , 1
+Tue => Weekday.Tue , 2
+Wed => Weekday.Wed , 3
+Thu => Weekday.Thu , 4
+Fri => Weekday.Fri , 5
+Sat => Weekday.Sat , 6
+'''
