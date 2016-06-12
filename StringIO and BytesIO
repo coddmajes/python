@@ -1,0 +1,28 @@
+#实现在内存中读写
+from io import StringIO
+f=StringIO()
+#f.write()
+#f.read()
+#读和写只能操作一个，
+'''
+是因为the stream position的原因，当你用：
+
+d = StringIO('Hello World')
+其stream position为0（可以通过d.tell()获得），而后执行
+
+d.readline()
+stream position移动到11.因此在执行此方法时，返回的是空字符串。
+
+类似的，使用
+
+f = StringIO()
+stream position也为0，而执行
+
+f.write('Hello World')
+stream position就移动到11了，因此你再执行readline时返回的依旧是空字符串，若你需要返回'Hello World'可以通过
+
+f.seek(0)
+调整stream position即可。
+'''
+
+#BytesIO同上
