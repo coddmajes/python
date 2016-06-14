@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+#python json序列化 pickle
+import pickle
+import json
+'''
+#test1 python 序列化
+
+
+
+d=dict(name='codd',age=19,score=90)
+#pickle.dumps(d)
+
+f=open('E:/personal/python_workspace/dump.txt','wb')
+pickle.dump(d,f)#file-like-Object
+f.close()
+'''
+
+'''
+# with as
+d=dict(name='codd',age=19,score=90)
+with open('E:/personal/python_workspace/dump.txt','wb') as f:
+	pickle.dump(d,f)
+'''
+	
+	
+	
+'''
+#test2 python 反序列化
+f=open('E:/personal/python_workspace/dump.txt','rb')
+d=pickle.load(f)
+f.close()
+print(d)
+'''
+
+'''
+# with as
+with open('E:/personal/python_workspace/dump.txt','rb') as f:
+	print(pickle.load(f))
+	
+'''
+
+'''
+#python 与 JSON的序列化
+d=dict(name='codd',age=19,score=90)
+f=open('E:/personal/python_workspace/dump.txt','w')
+json.dump(d,f)
+#print(json.dumps(d))
+'''
+
+'''
+d=dict(name='codd',age=19,score=90)
+with open('E:/personal/python_workspace/dump.txt','w') as f:
+	print(json.dump(d,f))
+'''
+
+'''
+#python 与 JSON的反序列化
+f=open('E:/personal/python_workspace/dump.txt','r')
+d=json.load(f)
+f.close()
+print(d)
+'''
+'''
+with open('E:/personal/python_workspace/dump.txt','r') as f:
+	print(json.load(f))
+'''
+
+
+#json 序列化Student类
+
+class Student(object):
+	def __init__(self,name,score,age):
+		self.name=name
+		self.score=score
+		self.age=age
+
+
+'''
+def studentChange(std):
+	return {
+		'name':std.name,
+		'age':std.age,
+		'score':std.score
+	
+	}
+'''
+'''
+s=Student('codd',99,20)
+print(json.dumps(s,default=lambda obj:obj.__dict__))
+#如果class中有__slots__限制了变量  则上面方法无用
+#print(json.dumps(s,default=studentChange))
+'''
+
+#json 反序列化class类
+		
+def studentChange(d):
+	return Student(d['name'],d['age'],d['score'])
+json_str='{"age":20,"name":"codd","score":90}'
+print(json.loads(json_str,object_hook=studentChange))
