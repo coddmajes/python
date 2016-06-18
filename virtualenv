@@ -1,0 +1,19 @@
+#windows环境下
+
+
+1.用pip安装virtualenv： pip install virtualenv
+2.创建目录
+mkdir myproject
+cd myproject
+
+3.创建一个独立的Python运行环境，命名为venv
+virtualenv --no-site-packages venv
+
+Using base prefix 'c:...\programs\python\python35'
+New python executable in venv\Scripts\python.exe
+Installing setuptools, pip, wheel...done.
+
+进入venv 环境 
+venv\Scripts\activate
+
+退出环境一样，使用deactivate命令
