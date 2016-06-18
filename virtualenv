@@ -17,3 +17,6 @@ Installing setuptools, pip, wheel...done.
 venv\Scripts\activate
 
 退出环境一样，使用deactivate命令
+
+#virtualenv 用来创建虚拟环境
+#virtualenvwrapper 则用来管理虚拟环境
