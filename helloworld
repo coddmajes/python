@@ -5,3 +5,6 @@
 
 name = input('please input your name:')
 print('hello,'name)
+
+exit() //退出python 终端
+python file-name.py //在终端运行某个文件
