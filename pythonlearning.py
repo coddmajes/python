@@ -17,8 +17,6 @@ print(r'''1
 ...2
 ...3''')
 
-
-
 #一个布尔值只有True、False
 #布尔值可以用and、or和not运算
 #空值是Python里一个特殊的值，用None表示
