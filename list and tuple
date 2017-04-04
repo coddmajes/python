@@ -1,6 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+#list,是一个有序表
+num = [1,2,3]
+#最后一个元素的索引是len(classmates) - 1
+num.append(4) #在末尾追加
+num.insert(2,5) #插入元素
+num.pop() #删除末尾的元素，也可以为pop(i),i为元素位置
+num[0]=10 #直接将某处进行替换
+num = [1,2,3,[0,2,4,6],9] #list中可以再次包含list
+
+#tuple，tuple一旦初始化就不能更改大小，其余和list用法一样
+num = (1) #表示1这个数
+num = (1,) #表示tuple
+num = (1,2,[0.4.6],77) #tuple说的不变是指每个元素的指向永远不变
 
 #list与tuple
 L = [
