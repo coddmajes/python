@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+'''
+if <条件判断1>:
+    <执行1>
+elif <条件判断2>:
+    <执行2>
+elif <条件判断3>:
+    <执行3>
+else:
+    <执行4>
+'''
+
+#if 语句执行特点，从上往下判定，某个是true，则对后面的语句进行忽略
+
+#input()
+s = input('birth:')
+>>>12
+#会出现错误，是因为input()返回的数据类型是str,需用int()来进行将str转换成int
+
