@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+#dict 键-值（key-value）存储，dict中不能存放可变值，如list
+'''
+d={"codd":11,"bob":23}
+print(d['codd'])
+print('kate' in d)
+print(d.get('bob'))
+
+#用pop 进行删除元素
+print(d.pop('bob'))
+'''
+
+#set 可以看成数学意义上的无序和无重复元素的集合,在set中没有重复的key值
+'''
+add(key)
+remove(key)
+s1 & s2
+s1 | s2
+str是不变对象，而list是可变对象
+'''
