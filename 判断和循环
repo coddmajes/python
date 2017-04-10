@@ -59,3 +59,28 @@ for name in L:
 	print('Hello, %s!'%name)
 
 '''
+
+#break and continue
+#break 语句可以提前退出循环,两个语句通常都必须配合if语句使用
+#Python中不能使用++，自增这种符号
+'''
+n=1
+while n<=100:
+	n=n+1 
+	if (n>10):
+		break
+	
+	print(n)
+print("end")
+'''
+#continue 退出本次循环，直接执行下一次循环
+'''
+n=0
+while n<=10：
+	n=n+1
+	if(n%2==0):
+		continue
+	
+	print(n)
+print("end")
+'''
