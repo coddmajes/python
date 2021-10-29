@@ -1,5 +1,5 @@
 ## python examples
-some examples about python3
+some examples based on python3
 
 updated an example of changing choices of a postgraduation English test randomly
 for example, 
